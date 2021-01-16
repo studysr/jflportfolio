@@ -1,0 +1,136 @@
+
+
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>JFLsoft Portfolio</title>
+
+
+  <!-- Favicons -->
+  <link href="{% static 'assets/img/favicon.png' %}" rel="icon">
+  <link href="{% static 'assets/img/jfl-touch-icon.png' %}" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i|Playfair+Display:400,400i,500,500i,600,600i,700,700i&subset=cyrillic" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="{% static 'assets/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/icofont/icofont.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/boxicons/css/boxicons.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/venobox/venobox.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/owl.carousel/assets/owl.carousel.min.css' %}" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="{% static 'assets/css/style.css' %}" rel="stylesheet">
+
+  <!-------------------------------------
+  * Template Name: Portfolio by Josim
+  --------------------------------------->
+</head>
+
+<body>
+
+    <!-- ======= Breadcrumbs Section ======= -->
+    <section class="breadcrumbs">
+      <div class="container">
+        <div class="d-flex justify-content-between align-items-center">
+          <h1 class="text-light"><a href="{% url 'index' %}"><span><img src="{% static 'assets/img/jfllogo.png' %}" style="width: 40px;"> JFLsoft</span></a></h1>
+
+          <h2>Portfolio Details</h2>
+          <ol>
+            <li><a href="{% url 'index' %}">Home</a></li>
+            <li><a href="{% url 'index' %}">Portfolio</a></li>
+            <li>Portfolio Details</li>
+          </ol>
+        </div>
+
+      </div>
+    </section><!-- Breadcrumbs Section -->
+
+
+<!--------------------Dynamic Details image and information view--------------->
+
+    <!-- ======= Portfolio Details Section ======= -->
+    <section class="portfolio-details">
+      <div class="container">
+
+        <div class="portfolio-details-container">
+
+          <div class="owl-carousel portfolio-details-carousel">
+            <img src="{{ blog.image.url }}" class="img-fluid" alt="" style="width:700px;">
+            <img src="{% static 'assets/img/portfolio/coding.jpg' %}" class="img-fluid" alt="" style="width:700px;">
+            <img src="{% static 'assets/img/jfllogo.png' %}" class="img-fluid" alt="image will be added" style="width:400px;">
+          </div>
+
+          <div class="portfolio-info">
+            <h3>{{ blog.title }}</h3>
+            <ul>
+              <li><strong>Category</strong>: {{ blog.p_type }}</li>
+              <li><strong>Client</strong>: ASU Company</li>
+              <li><strong>Project date</strong>: 01 March, 2020</li>
+              <li><strong>Project URL</strong>: <a href="#">www.example.com</a></li>
+            </ul>
+          </div>
+
+        </div>
+
+        <div class="portfolio-description">
+          <h2>This is an example of portfolio detail</h2>
+          <p>{{blog.body}}</p>
+        </div>
+      </div>
+    </section><!-- End Portfolio Details Section -->
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong><span>JFLsoft</span></strong>. All Rights Reserved
+      </div>
+      <div class="credits">
+        Designed by <a href="https://jflsoft.com/">JFLsoft</a>
+      </div>
+    </div>
+  </footer><!-- End  Footer -->
+
+  <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
+
+
+<!-- Vendor JS Files -->
+  <script src="{% static 'assets/vendor/jquery/jquery.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+
+  <!--for section auto slow scroll one page-->
+  <script src="{% static 'assets/vendor/jquery.easing/jquery.easing.min.js' %}"></script>
+
+  <!--for submitting contact form without reloding page and show result. backend-->
+  <script src="{% static 'assets/vendor/php-email-form/validate.js' %}"></script>
+
+  <!--for to get scroll menu bar fixed of stiky-->
+  <script src="{% static 'assets/vendor/jquery-sticky/jquery.sticky.js' %}"></script>
+
+  <!--for counter number and percent bar-->
+  <script src="{% static 'assets/vendor/counterup/counterup.min.js' %}"></script>
+
+  <!--for gallery item tab system-->
+  <script src="{% static 'assets/vendor/waypoints/jquery.waypoints.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/isotope-layout/isotope.pkgd.min.js' %}"></script> 
+  <script src="{% static 'assets/vendor/venobox/venobox.min.js' %}"></script>
+
+  <!--for carousel-->
+  <script src="{% static 'assets/vendor/owl.carousel/owl.carousel.min.js' %}"></script>
+
+  <!-- Template Main JS File -->
+  <script src="{% static 'assets/js/main.js' %}"></script>
+<!-- Vendor JS Files end -->
+</body>
+
+</html>

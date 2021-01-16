@@ -1,0 +1,781 @@
+
+
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>JFLsoft Portfolio</title>
+
+
+  <!-- Favicons -->
+  <link href="{% static 'assets/img/favicon.png' %}" rel="icon">
+  <link href="{% static 'assets/img/jfl-touch-icon.png' %}" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i|Playfair+Display:400,400i,500,500i,600,600i,700,700i&subset=cyrillic" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="{% static 'assets/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/icofont/icofont.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/boxicons/css/boxicons.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/venobox/venobox.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/owl.carousel/assets/owl.carousel.min.css' %}" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="{% static 'assets/css/style.css' %}" rel="stylesheet">
+
+  <!-------------------------------------
+  * Template Name: Portfolio by Josim
+  --------------------------------------->
+</head>
+
+<body>
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="d-flex flex-column align-items-center justify-content-center">
+    <h1>Welcome to JFL soft!</h1>
+
+
+<!-- Typing Text -->
+      <link rel="stylesheet" href="{% static 'typing/style.css' %}"> 
+        <div class="container typing py-0">
+            <h2><span class="typed-text"></span><span class="cursor">&nbsp;</span></h2>
+        </div>
+      <script  src="{% static 'typing/script.js' %}"></script>
+<!--end Typing Text-->
+
+
+    <a href="#about" class="btn-get-started scrollto"><i class="icofont-circled-down"></i></a>
+  </section><!-- End Hero -->
+
+  <!-- ======= Header ======= -->
+  <header id="header">
+    <div class="container d-flex align-items-center">
+
+      <div class="logo mr-auto">
+        <h1 class="text-light"><a href="#"><span><img src="{% static 'assets/img/jfllogo.png' %}"> JFLsoft</span></a></h1>
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+      </div>
+
+
+      {% include 'accounts/Login_signup_transpatent.html' %}
+      <a class="nav-link btn" onclick="document.getElementById('id01').style.display='block'" style="width:auto;" name="login_popup" >SignUp</a> &nbsp; &nbsp;
+      
+
+      <nav class="nav-menu d-none d-lg-block">
+        <ul>
+          <li class="active"><a href="#">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#process">Process</a></li>
+          <li class="drop-down"><a href="#services">Services</a>
+            <ul>
+              <li class="drop-down"><a href="#services">Dynamic Web-apps</a>
+                <ul>
+                  <li><a href="#services">E-commerce Website</a></li>
+                  <li><a href="#services">Educational website</a></li>
+                  <li><a href="#services">Newspaper Webstie</a></li>
+                  <li><a href="#services">Company Website</a></li>
+                  <li><a href="#services">Billing Web-app</a></li>
+                  <li><a href="#services">financial Web-app</a></li>
+                  <li><a href="#services">Medical Web-app</a></li>
+                  <li><a href="#services">Desktop Software</a></li>
+                </ul>
+              </li>
+              <li><a href="#portfolio">Python Programming</a></li>
+              <li><a href="#portfolio">Design & Development</a></li>
+              <li><a href="#portfolio">Billing & Accounting Soft</a></li>
+            </ul>
+          </li>
+
+
+          <li class="drop-down"><a href="#portfolio">Portfolio</a>
+            <ul>
+              <li><a href="#portfolio">Image Gallery</a></li>
+              <li><a href="#video">Video Gallery</a></li>
+            </ul>
+          </li>
+
+
+          <li><a href="#contact">Contact</a></li>
+          {% if user.is_authenticated %}
+          <li class="drop-down"><a href="">{{ user.username }}</a>
+            <ul>
+              <li><a href="#">{{ user.username }}</a></li>
+              <li class="drop-down"><a href="#">Actions</a>
+                <ul>
+                  <li><a href="#">Its ok</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Thanks</a></li>
+              <li><a href="{% url 'logout' %}">Logout</a></li>
+            </ul>
+          </li>
+          {% endif %}
+
+        </ul>
+      </nav><!-- .nav-menu -->
+
+    </div>
+  </header><!-- End Header -->
+
+  <main id="main">
+
+    <!-- ======= About Section ======= -->
+    <section id="about" class="about">
+      <div class="container">
+
+        <div class="row no-gutters">
+          <div class="image col-xl-5 d-flex align-items-stretch justify-content-center justify-content-lg-start"></div>
+          <div class="col-xl-7 pl-0 pl-lg-5 pr-lg-1 d-flex align-items-stretch">
+            <div class="content d-flex flex-column justify-content-center">
+              <h3>Dynamic web developer and programmer</h3>
+              <p>
+                We make dynamic website with Python programming language, witch is the powerfull language in the world. We can also use php if you want. We can give any types of design and backend programming on your demand.
+              </p>
+              <div class="row">
+                <div class="col-md-6 d-md-flex align-items-md-stretch bg-success">
+                  <div class="count-box">
+                    <i class="icofont-simple-smile"></i>
+                    <span data-toggle="counter-up">76</span>
+                    <p class="text-dark"><strong>Running Web Project</strong> is going on.</p>
+                  </div>
+                </div>
+
+                <div class="col-md-6 d-md-flex align-items-md-stretch bg-warning">
+                  <div class="count-box">
+                    <i class="icofont-document-folder"></i>
+                    <span data-toggle="counter-up">92</span>
+                    <p class="text-dark"><strong>Running e-Commerce Project</strong> is going on all over the world</p>
+                  </div>
+                </div>
+
+                <br/>
+
+                <div class="col-md-6 d-md-flex align-items-md-stretch bg-warning">
+                  <div class="count-box">
+                    <i class="icofont-clock-time"></i>
+                    <span data-toggle="counter-up">3</span>
+                    <p class="text-dark"><strong>Years of experience </strong> of JFLsoft is the best web design and development company in Bangladesh</p>
+                  </div>
+                </div>
+
+                <div class="col-md-6 d-md-flex align-items-md-stretch bg-success">
+                  <div class="count-box">
+                    <i class="icofont-award"></i>
+                    <span data-toggle="counter-up">36</span>
+                    <p class="text-dark"><strong>Project Handed Over</strong> successfully to our client. </p>
+                  </div>
+                </div>
+              </div>
+            </div><!-- End .content-->
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End About Section -->
+
+    <!-- ======= Skills Section ======= -->
+    <section id="skills" class="skills section-bg">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Skills</h2>
+
+          <p>We have expert in different kinds of Language to make dynamic and complex webapps. You can see percentage of language and framwork we use. </p>
+        </div>
+
+        <div class="row skills-content">
+
+          <div class="col-lg-6">
+
+            <div class="progress">
+              <span class="skill">HTML <i class="val">100%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+
+            <div class="progress">
+              <span class="skill">CSS <i class="val">100%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+
+            <div class="progress">
+              <span class="skill">Bootstrap <i class="val">98%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="98" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+
+            <div class="progress">
+              <span class="skill">JavaScript <i class="val">90%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+
+            <div class="progress">
+              <span class="skill">jQuery <i class="val">90%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+            <div class="progress">
+              <span class="skill">React <i class="val">75%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="col-lg-6">
+
+            <div class="progress">
+              <span class="skill">Python <i class="val">98%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="98" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+
+            <div class="progress">
+              <span class="skill">Django<i class="val">99%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="99" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+
+            <div class="progress">
+              <span class="skill">PHP <i class="val">90%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+
+            <div class="progress">
+              <span class="skill">Larabel <i class="val">90%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+
+            <div class="progress">
+              <span class="skill">MySQL,Postgresql <i class="val">95%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+            <div class="progress">
+              <span class="skill">Mongo DB<i class="val">85%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Skills Section -->
+
+    
+
+    <!-- ======= Services Section ======= -->
+    <section id="services" class="services section-bg">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Services</h2>
+          <p>We Are Creative Web Development Company, Focused on Growing Brands Online, Company Website, E-commerce Website, Newspaper Webstie, Blogging, website, Educational website</p>
+        </div>
+
+        <div class="row">
+          <div class="col-md-6 col-lg-4 d-flex align-items-stretch mb-5 mb-lg-0">
+            <div class="icon-box">
+              <div class="icon"><i class="icofont-shopping-cart"></i></div>
+              <h4 class="title"><a href="">E-commerce Website</a></h4>              
+                <p class="description"><i class="icofont-tick-mark" style="color: blue;"></i> Payment Option</p>
+                <p class="description"><i class="icofont-tick-mark" style="color: blue;"></i> Modern &amp; Clean 
+                Interface</p>
+                <p class="description"><i class="icofont-tick-mark" style="color: blue;"></i> Customer Relationship</p>
+                <p class="description"><i class="icofont-tick-mark" style="color: blue;"></i> Shipping Options</p>
+                <p class="description"><i class="icofont-tick-mark" style="color: blue;"></i> Login System</p>
+                <p class="description"><i class="icofont-tick-mark" style="color: blue;"></i> Store Management</p>
+                <p class="description"><i class="icofont-tick-mark" style="color: blue;"></i> Responsive Design</p>
+                <p class="description"><i class="icofont-tick-mark" style="color: blue;"></i> Security Features</p>
+                <p></p>
+                <a class="btn btn-primary" href="#contact">Order Now!</a>                
+            </div>
+          </div>
+
+
+        <div class="col-md-6 col-lg-4 d-flex align-items-stretch mb-5 mb-lg-0">
+            <div class="icon-box">
+              <div class="icon"><i class="icofont-education"></i></div>
+              <h4 class="title"><a href="">Educational website</a></h4>
+                <p class="description"><i class="icofont-tick-mark" style="color: blue;"></i> Student Login</p>
+                <p class="description"><i class="icofont-tick-mark" style="color: blue;"></i> Modern &amp; Clean 
+                Interface</p>
+                <p class="description"><i class="icofont-tick-mark" style="color: blue;"></i>Notice Board</p>
+                <p class="description"><i class="icofont-tick-mark" style="color: blue;"></i> Powerful Database</p>
+                <p class="description"><i class="icofont-tick-mark" style="color: blue;"></i> Payment Option</p>
+                <p class="description"><i class="icofont-tick-mark" style="color: blue;"></i>Auto Result calcultaion</p>
+                <p class="description"><i class="icofont-tick-mark" style="color: blue;"></i> Responsive Design</p>
+
+                <p></p>
+                <a class="btn btn-primary" href="#contact">Order Now!</a> 
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4 d-flex align-items-stretch mb-5 mb-lg-0">
+            <div class="icon-box">
+              <div class="icon"><i class="icofont-news"></i></div>
+              <h4 class="title"><a href="">Newspaper Webstie</a></h4>
+                <p class="description"><i class="icofont-tick-mark" style="color: blue;"></i> Great looking Home page</p>
+                <p class="description"><i class="icofont-tick-mark" style="color: blue;"></i> Modern &amp; Clean 
+                Interface</p>
+                <p class="description"><i class="icofont-tick-mark" style="color: blue;"></i> Customer Relationship</p>
+                <p class="description"><i class="icofont-tick-mark" style="color: blue;"></i>Running Headline</p>
+                <p class="description"><i class="icofont-tick-mark" style="color: blue;"></i> Comment System</p>
+                <p class="description"><i class="icofont-tick-mark" style="color: blue;"></i> Archive Management</p>
+                <p class="description"><i class="icofont-tick-mark" style="color: blue;"></i> Responsive Design</p>
+
+                <p></p>
+                <a class="btn btn-primary" href="#contact">Order Now!</a> 
+            </div>
+          </div>
+        </div>
+
+      <div class="row py-4">
+
+          <div class="col-md-6 col-lg-4 d-flex align-items-stretch mb-5 mb-lg-0">
+            <div class="icon-box">
+              <div class="icon"><i class="icofont-company"></i></div>
+              <h4 class="title"><a href="">Medical/Company Web</a></h4>
+                <p class="description"><i class="icofont-tick-mark" style="color: blue;"></i> Login & signup</p>
+                <p class="description"><i class="icofont-tick-mark" style="color: blue;"></i> Modern &amp; Clean 
+                Interface</p>
+                <p class="description"><i class="icofont-tick-mark" style="color: blue;"></i> Customer Relationship</p>
+                <p class="description"><i class="icofont-tick-mark" style="color: blue;"></i> Fast loading</p>
+                <p class="description"><i class="icofont-tick-mark" style="color: blue;"></i> Easy to Update</p>
+                <p class="description"><i class="icofont-tick-mark" style="color: blue;"></i>Employee management</p>
+                <p class="description"><i class="icofont-tick-mark" style="color: blue;"></i> Responsive Design</p>
+                <p class="description"><i class="icofont-tick-mark" style="color: blue;"></i> Any kinds of calculation</p>
+                <p></p>
+                <a class="btn btn-primary" href="#contact">Order Now!</a> 
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4 d-flex align-items-stretch mb-5 mb-lg-0">
+            <div class="icon-box">
+              <div class="icon"><i class="icofont-pay"></i></div>
+              <h4 class="title"><a href="">Billing/financial Webapp</a></h4>
+                <p class="description"><i class="icofont-tick-mark" style="color: blue;"></i> Payment Option</p>
+                <p class="description"><i class="icofont-tick-mark" style="color: blue;"></i> Modern &amp; Clean 
+                Interface</p>
+                <p class="description"><i class="icofont-tick-mark" style="color: blue;"></i> Customer Relationship</p>
+                <p class="description"><i class="icofont-tick-mark" style="color: blue;"></i> Security system</p>
+                <p class="description"><i class="icofont-tick-mark" style="color: blue;"></i> Signup & Login System</p>
+                <p class="description"><i class="icofont-tick-mark" style="color: blue;"></i> Complex calculations</p>
+                <p class="description"><i class="icofont-tick-mark" style="color: blue;"></i> Easy Backup</p>
+                <p></p>
+                <a class="btn btn-primary" href="#contact">Order Now!</a> 
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4 d-flex align-items-stretch mb-5 mb-lg-0">
+            <div class="icon-box">
+              <div class="icon"><i class="icofont-file-python"></i></div>
+              <h4 class="title"><a href="">Desktop Software</a></h4>
+                <p class="description"><i class="icofont-tick-mark" style="color: blue;"></i> Advanced GUI</p>
+                <p class="description"><i class="icofont-tick-mark" style="color: blue;"></i> Modern &amp; Clean 
+                Interface</p>
+                <p class="description"><i class="icofont-tick-mark" style="color: blue;"></i> Easy Backup</p>
+                <p class="description"><i class="icofont-tick-mark" style="color: blue;"></i> Fast Database</p>
+                <p class="description"><i class="icofont-tick-mark" style="color: blue;"></i> Login System</p>
+                <p class="description"><i class="icofont-tick-mark" style="color: blue;"></i> Store Management</p>
+                <p class="description"><i class="icofont-tick-mark" style="color: blue;"></i> Responsive Design</p>
+                <p></p>
+                <a class="btn btn-primary" href="#contact">Order Now!</a> 
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Services Section -->
+
+    <!-- ======= Portfolio Section ======= -->
+    <section id="portfolio" class="portfolio section-bg">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Portfolio</h2>
+          <p>INTERACTIVE DESIGNER: 
+Web development | Software development | User interface design | Tools & workflow development | Digital publishing support | Fill-in media artist (illustration, animation, 3D modeling, video production,</p>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-12 d-flex justify-content-center">
+            <ul id="portfolio-flters">
+              <li data-filter="*" class="filter-active">All</li>
+              <li data-filter=".filter-webapp">WebApp</li>
+              <li data-filter=".filter-card">Card</li>
+              <li data-filter=".filter-website">WebSite</li>
+            </ul>
+          </div>
+        </div>
+
+
+<!---------------------------------------------
+  Dynamic Gallary with filter
+----------------------------------------------->
+        <div class="row portfolio-container">
+{% for blog in blogs.all %}
+          <div class="col-lg-4 col-md-6 portfolio-item filter-{{ blog.p_type }}">
+            <div class="portfolio-wrap">
+              <img src="{{ blog.image.url }}" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>{{ blog.title }}</h4>
+                <p>{{ blog.summary }}</p>
+              </div>
+              <div class="portfolio-links">
+                <a href="{{ blog.image.url }}" data-gall="portfolioGallery" class="venobox" title="Web 2"><i class="icofont-ui-zoom-in"></i></a>
+                <a href="{% url 'detail' blog.id %}" title="More Details"><i class="icofont-clip"></i></a>
+                
+              </div>
+            </div>
+          </div>
+{% endfor %}
+
+        </div>
+      </div>
+    </section><!-- End Portfolio Section -->
+
+
+
+   <!---------------------------------------------
+   Video Gallary with filter
+   ----------------------------------------------->
+    <section id="video" class="portfolio section-bg">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Video Gallery</h2>
+          <p>This is our simple project's tutorial. You can see to this to know about our farm.</p>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-12 d-flex justify-content-center">
+            <ul id="portfolio-flters">
+              <li data-filter="*" class="filter-active">Click to view</li>
+              <li data-filter=".filter-english">English</li>
+              <li data-filter=".filter-bangla">Bangla</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="row portfolio-container">
+          <div class="col-lg-6 col-md-6 portfolio-item filter-english">
+              <iframe width="100%" height="330px;" src="https://www.youtube.com/embed/8e2CyE3Y_CM" frameborder="1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+
+          <div class="col-lg-6 col-md-6 portfolio-item filter-bangla">
+              <iframe width="100%" height="330px" src="https://www.youtube.com/embed/hCzNwbKzZf0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+
+        </div>
+      </div>
+    </section><!-- End  Video Section -->
+
+<!-- ======= Process Section ======= -->
+    <section id="process" class="resume section-bg">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Our Development Process</h2>
+          <p>As we have been delivering programming and web development services for over a decade, our process is clear, effective and enables timely delivery of your web solution. From comprehensive requirement gathering to ensuring continuous operation of your web solution after deployment, we have everything covered for you.</p>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-6">
+            <h3 class="resume-title"><i class="icofont-check-circled" style="color:blue;font-size: 30pt;"></i> Process</h3>
+            <h3 class="resume-title">1. KICK-OFF STAGE</h3>
+            <div class="resume-item pb-0">
+              <h4>Your Requirement to Technicl</h4>
+              <p><em>On this stage, our experts translate your business requirements into technical documents for your web solution. We also gather the team, and its designer(s) create a basic design. This stage lays the foundation for the entire project. </em></p>
+
+            </div>
+
+            <h3 class="resume-title">2. DEVELOPMENT STAGE</h3>
+            <div class="resume-item">
+              <h4>Online customer support</h4>
+              <p><em>Our software engineers create your web solution. JFLsoft uses the Scrum methodology, so you will review results every two weeks. Then, our experts perform User Acceptance Testing and deploy your web solution.</em></p>
+            </div>
+
+            <h3 class="resume-title">3. SUPPORT STAGE</h3>
+            <div class="resume-item">
+              <h4>Online customer support</h4>
+              <p><em>After your web solution is released, we perform continuous server monitoring, allocate team members to fix bugs, and provide general customer support.</em></p>
+            </div>
+            
+          </div>
+          <div class="col-lg-6">
+            <h3 class="resume-title"><i class="icofont-check-circled" style="color:blue;font-size: 30pt;"></i> Why Choose Us?</h3>
+             <h4>We are caring, creative professional.</h4>
+            
+            <div class="resume-item">
+              <h4>Experts</h4>
+              <p>Lead in the design, development, and implementation of the graphic, layout, and production communication materials</p>
+            </div>
+             <div class="resume-item">
+              <h4>Trust</h4>
+              <p>We have served local and international clients and gain trust by meeting their expectation.
+              </p>
+            </div>           
+            <div class="resume-item">
+              <h4>Work force</h4>
+              <p>We recruits some of the best designers and developers to ensure top level output for our clients.
+              </p>
+            </div>
+            <div class="resume-item">
+              <h4>Dedication</h4>
+              <p><em></em></p>
+              <p>We're dedicated to giving you the best service possible. And we'll prove it.</p>
+            </div>
+            <div class="resume-item">
+              <h4>Online Support</h4>
+              <p><em></em></p>
+              <p>We are giving online support regularly. And we'll prove it.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End Resume Section -->
+
+
+    <!-- ======= Testimonials Section ======= -->
+    <section id="testimonials" class="testimonials section-bg">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Testimonials</h2>
+          <p>About our work. See the testimonials of famous persons.</p>
+        </div>
+
+        <div class="owl-carousel testimonials-carousel">
+
+          <div class="testimonial-item">
+            <p>
+              <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+              I can highly recommend JFLsoft and his team for everyone. My project was done on time and exactly according to the specifications. All bugs discovered during developing were fixed very promptly. I will use him again for the other websites I am creating.
+              <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+            </p>
+            <img src="{% static 'assets/img/testimonials/testimonials-1.jpg' %}" class="testimonial-img" alt="">
+            <h3>Raihan Nur</h3>
+            <h4>Ceo &amp; Founder</h4>
+          </div>
+
+          <div class="testimonial-item">
+            <p>
+              <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+              I was a bit worried about sourcing work to overseas companies but I have been very pleased with how things went and are extremely happy with JFLsoft's work. My contact Hare was always available to answer questions and work with me.
+              <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+            </p>
+            <img src="{% static 'assets/img/testimonials/testimonials-2.jpg' %}" class="testimonial-img" alt="">
+            <h3>Saruar Hossain</h3>
+            <h4>Designer</h4>
+          </div>
+
+          <div class="testimonial-item">
+            <p>
+              <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+              JFLsoft team is very skilled and knowledgeable, they produce good quality work and are extremely responsive and work very quickly.They work with me responsively. I am very pleased with the webapp they designed and integrated for our company.
+              <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+            </p>
+            <img src="{% static 'assets/img/testimonials/testimonials-3.jpg' %}" class="testimonial-img" alt="">
+            <h3>Julfi</h3>
+            <h4>Store Owner</h4>
+          </div>
+
+          <div class="testimonial-item">
+            <p>
+              <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+              Technically competent provider. But we faced difficulty in communicating our point across. Which required a number of iterations and took a long time for getting it resolved. But JFLsoft finally completed the project broadly to our satisfaction, which is very good.
+              <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+            </p>
+            <img src="{% static 'assets/img/testimonials/testimonials-4.jpg' %}" class="testimonial-img" alt="">
+            <h3>S. Alam</h3>
+            <h4>Freelancer</h4>
+          </div>
+
+          <div class="testimonial-item">
+            <p>
+              <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+              JFLsoft's founder was very good at creating my website. He obviously has a large amount of experience as he was able to create exactly what I wanted very quickly. He gave me a lot of good advice as well. I will use him again for the other websites I am creating.
+              <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+            </p>
+            <img src="{% static 'assets/img/testimonials/testimonials-5.jpg' %}" class="testimonial-img" alt="">
+            <h3>MD Nahid</h3>
+            <h4>Entrepreneur</h4>
+          </div>
+
+          <div class="testimonial-item">
+            <p>
+              <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+              JFLsoft's founder was very good at creating my website. He obviously has a large amount of experience as he was able to create exactly what I wanted very quickly. He gave me a lot of good advice as well. I will use him again for the other websites I am creating.
+              <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+            </p>
+            <img src="{% static 'assets/img/testimonials/testimonials-6.jpg' %}" class="testimonial-img" alt="">
+            <h3>Jahangir Alam</h3>
+            <h4>Entrepreneur</h4>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Testimonials Section -->
+
+    <!-- ======= Contact Section ======= -->
+    <section id="contact" class="contact section-bg">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Contact</h2>
+          <p>If you are an existing customer and having any issue or questions, please contact with us. Please do not use the form below for your technical support needs. New Customer, if you should have any questions or inquiries please fill out the form below and we will get back to shortly.</p>
+        </div>
+
+        <div class="row">
+
+          <div class="col-lg-4 col-md-4">
+            <div class="contact-about">
+              <h3>JFLsoft</h3>
+              <p>You can connect with us in social media to get new feature of our software and web-apps.</p>
+              <img src="{% static 'assets/img/jfllogo.png' %}" style="width: 50%">
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-4">
+            <div class="info">
+              <div>
+                <i class="icofont-google-map"></i>
+                <p>Mymensingh<br>Dhaka, Bangladesh</p>
+              </div>
+
+              <div>
+                <i class="icofont-envelope"></i>
+                <p>jflsoftbd@gmail.com</p>
+              </div>
+
+              <div>
+                <i class="icofont-phone"></i>
+                <p>+880173242**</p>
+              </div>
+
+            </div>
+          </div>
+
+        <!--django contact form submit-->
+          <div class="col-lg-5 col-md-8">
+            <h3>SEND US A MESSAGE</h3>
+            <form action="{% url 'contact' %}" method="post" class="php-email-form">
+              <div class="form-group">
+                {% csrf_token %}
+                <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                <div class="validate"></div>
+              </div>
+              <div class="form-group">
+                <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" />
+                <div class="validate"></div>
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control" name="subject" id="subject" placeholder="Mobile" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+                <div class="validate"></div>
+              </div>
+              <div class="form-group">
+                <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
+                <div class="validate"></div>
+              </div>
+              <div class="mb-3">
+                <div class="loading">Loading</div>
+                <div class="error-message"></div>
+                <div class="sent-message">Your message has been sent. Thank you!</div>
+              </div>
+              <div class="text-center"><button type="submit">Send Message</button></div>
+            </form>
+          </div>
+        </div>
+        <hr/>
+        <div class="social-links text-center py-5">
+                <button class="btn btn-outline-success">Connect with us</button>
+                <a href="#" class="twitter"><i class="icofont-twitter"></i></a>
+                <a href="https://web.facebook.com/StudySr-103780587787486" target="_blank" class="facebook"><i class="icofont-facebook"></i></a>
+                <a href="https://www.youtube.com/channel/UCCeOPJ65IjTeH4_8ppHrDdw/" target="_blank" class="youtube"><i class="icofont-youtube"></i></a>
+                <a href="#" class="instagram"><i class="icofont-instagram"></i></a>
+                <a href="#" class="linkedin"><i class="icofont-linkedin"></i></a>
+                <button class="btn btn-outline-success">in social media</button>
+        </div>
+
+      </div>
+    </section><!-- End Contact Section -->
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong><span>JFLsoft</span></strong>. All Rights Reserved
+      </div>
+      <div class="credits">
+        Programming and development by <a href="https://www.youtube.com/channel/UCCeOPJ65IjTeH4_8ppHrDdw/">JFLsoft</a>
+      </div>
+    </div>
+  </footer><!-- End  Footer -->
+
+
+
+  <a href="#" class="chat-icon"><i class="icofont-ui-text-chat"></i></a>
+  <a href="#" class="back-to-top"><i class="icofont-circled-up"></i></a>
+
+
+<!-- Vendor JS Files -->
+  <script src="{% static 'assets/vendor/jquery/jquery.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+
+  <!--for section auto slow scroll one page-->
+  <script src="{% static 'assets/vendor/jquery.easing/jquery.easing.min.js' %}"></script>
+
+  <!--for submitting contact form without reloding page and show result. backend-->
+  <script src="{% static 'assets/vendor/php-email-form/validate.js' %}"></script>
+
+  <!--for to get scroll menu bar fixed of stiky-->
+  <script src="{% static 'assets/vendor/jquery-sticky/jquery.sticky.js' %}"></script>
+
+  <!--for counter number and percent bar-->
+  <script src="{% static 'assets/vendor/counterup/counterup.min.js' %}"></script>
+
+  <!--for gallery item tab system-->
+  <script src="{% static 'assets/vendor/waypoints/jquery.waypoints.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/isotope-layout/isotope.pkgd.min.js' %}"></script> 
+  <script src="{% static 'assets/vendor/venobox/venobox.min.js' %}"></script>
+
+  <!--for carousel-->
+  <script src="{% static 'assets/vendor/owl.carousel/owl.carousel.min.js' %}"></script>
+
+  <!-- Template Main JS File -->
+  <script src="{% static 'assets/js/main.js' %}"></script>
+<!-- Vendor JS Files end -->
+</body>
+
+</html>
